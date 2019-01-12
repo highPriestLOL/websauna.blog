@@ -87,7 +87,7 @@ class PostSchema(CSRFSchema):
     body = colander.SchemaNode(colander.String(),
             description="Use Markdown formatting.",
             required=True,
-            widget=deform.widget.TextAreaWidget(rows=40, css_class="body-text"))
+            widget=deform.widget.TextAreaWidget(cols=60, rows=40, css_class="body-text"))
 
     def dictify(self, obj: Post) -> dict:
         """Serialize SQLAlchemy model instance to nested dictionary appstruct presentation."""
