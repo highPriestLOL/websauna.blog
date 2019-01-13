@@ -159,7 +159,7 @@ class PostEditSchema(CSRFSchema):
     body = colander.SchemaNode(colander.String(),
             description="Use Markdown formatting.",
             required=True,
-            widget=deform.widget.TextAreaWidget(rows=40, css_class="body-text"))
+            widget=deform.widget.TextAreaWidget(cols=60, rows=40, css_class="body-text"))
 
     published_at = colander.SchemaNode(colander.DateTime(),
             required=False)
